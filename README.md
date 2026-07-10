@@ -92,6 +92,72 @@ Clique nos links abaixo para navegar direto:
 
 📄 Detalhes de contribuição individual estão documentados em [`CONTRIBUICOES.md`](./CONTRIBUICOES.md).
 
-## 📜 Licença
+## Acervo Utilizado
 
-Este projeto foi desenvolvido para fins acadêmicos, como parte do desafio Compass. Os documentos PCDT utilizados são de domínio público, disponibilizados pelo Ministério da Saúde do Brasil.
+O sistema utiliza como base de conhecimento os **Protocolos Clínicos e Diretrizes Terapêuticas (PCDT)** disponibilizados oficialmente pelo **Ministério da Saúde**. Os documentos foram obtidos a partir do portal público de PCDTs (https://www.gov.br/saude/pt-br/assuntos/pcdt), que reúne protocolos organizados por condição clínica e atualizados periodicamente conforme novas evidências científicas e normativas do SUS.
+
+Os PCDTs são documentos normativos que estabelecem critérios para diagnóstico, tratamento, acompanhamento e monitoramento de doenças no âmbito do Sistema Único de Saúde (SUS). Eles definem, entre outros aspectos:
+
+- critérios diagnósticos;
+- critérios de inclusão e exclusão de pacientes;
+- medicamentos recomendados;
+- posologias;
+- exames necessários;
+- mecanismos de monitoramento clínico;
+- critérios para avaliação dos resultados terapêuticos.
+
+As recomendações presentes nesses documentos são fundamentadas em evidências científicas e consideram aspectos de eficácia, segurança, efetividade e custo-efetividade das tecnologias incorporadas ao SUS.
+
+> **Importante:** os PCDTs **não substituem o julgamento clínico do profissional de saúde** e **não devem ser utilizados como ferramenta de diagnóstico clínico**. Seu propósito é padronizar a assistência prestada no SUS, definindo critérios técnicos e administrativos para diagnóstico, tratamento e acompanhamento dos pacientes.
+
+### Tipos de perguntas suportadas
+
+Considerando a natureza dos PCDTs, o sistema foi projetado para responder perguntas fundamentadas exclusivamente nas informações presentes nesses documentos. As principais categorias de consultas são:
+
+#### 1. Elegibilidade e acesso (Quem?)
+
+Perguntas destinadas a identificar quais pacientes têm direito ao tratamento pelo SUS, incluindo critérios de inclusão, critérios de exclusão, contraindicações e requisitos clínicos ou laboratoriais para acesso às terapias.
+
+**Exemplos:**
+
+- Quem pode receber determinado medicamento pelo SUS?
+- Quais são os critérios de exclusão do protocolo?
+- Em quais situações o tratamento é contraindicado?
+
+#### 2. Conduta terapêutica e linha de cuidado (O que fazer?)
+
+Perguntas relacionadas ao fluxo terapêutico recomendado pelo protocolo, incluindo primeira, segunda e terceira linhas de tratamento, posologias padronizadas, intervenções não farmacológicas e alternativas diante de falha terapêutica.
+
+**Exemplos:**
+
+- Qual é o tratamento de primeira linha?
+- Qual medicamento deve ser utilizado após falha terapêutica?
+- Qual a dose recomendada para adultos?
+
+#### 3. Resolução diagnóstica (Como comprovar?)
+
+Perguntas sobre os requisitos necessários para confirmação diagnóstica antes do início da terapia, incluindo exames laboratoriais, exames de imagem, critérios clínicos, escalas e códigos CID-10 previstos pelo protocolo.
+
+**Exemplos:**
+
+- Quais exames são necessários para confirmar o diagnóstico?
+- Qual CID-10 é utilizado para esta condição?
+- Quais critérios laboratoriais são exigidos?
+
+#### 4. Monitoramento, segurança e desfechos (Até quando?)
+
+Perguntas relacionadas ao acompanhamento longitudinal do paciente, monitoramento de efeitos adversos, exames periódicos, critérios de resposta terapêutica e condições que determinam a continuidade ou interrupção do tratamento.
+
+**Exemplos:**
+
+- Com que frequência o paciente deve ser reavaliado?
+- Quais exames devem ser realizados durante o tratamento?
+- Em quais situações o tratamento deve ser suspenso?
+
+## Aplicação no Contexto da Saúde
+
+Os PCDTs são documentos extensos e altamente estruturados, tornando a localização manual de informações um processo demorado. Um sistema **Retrieval-Augmented Generation (RAG)** permite consultar esse acervo em linguagem natural, recuperando apenas os trechos relevantes para responder às perguntas do usuário.
+
+Essa abordagem pode auxiliar profissionais de saúde e gestores na consulta rápida aos protocolos oficiais do Ministério da Saúde, reduzindo o tempo gasto na busca por informações como critérios de elegibilidade, exames necessários, linhas terapêuticas, posologias e recomendações de monitoramento.
+
+Como as respostas são fundamentadas exclusivamente no conteúdo dos PCDTs e acompanhadas da referência ao documento-fonte, o sistema oferece maior transparência e confiabilidade durante a consulta às diretrizes oficiais.
